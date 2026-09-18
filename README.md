@@ -21,7 +21,7 @@ brew upgrade HamadaSalhab/tap/agent-sync
 
 Installation and upgrades do not sync conversations or change existing configuration or machine identity. Connect each computer independently to your own **private** data repository, following the [tool's setup instructions](https://github.com/HamadaSalhab/agent-sync#first-machine). Do not reinitialize an already configured computer. Close the agents before syncing.
 
-This is a third-party tap, not Homebrew/core. Version 0.1.5 is an experimental release; review the tool's compatibility notes and keep backups.
+This is a third-party tap, not Homebrew/core. Version 0.1.6 is an experimental release; review the tool's compatibility notes and keep backups. Large-file snapshots use format version 2, so update every machine to 0.1.6 or newer before syncing them.
 
 ## Attribution and license
 

@@ -3,8 +3,8 @@ class AgentSync < Formula
 
   desc "Sync Claude Code and Codex conversations across machines using Git"
   homepage "https://github.com/HamadaSalhab/agent-sync"
-  url "https://github.com/HamadaSalhab/agent-sync/releases/download/v0.1.5/agent-sync-0.1.5.tar.gz"
-  sha256 "82627c5155c5c2e25e82da4882beb3cb622950cdb0c60d380a4aa14b7bc3644d"
+  url "https://github.com/HamadaSalhab/agent-sync/releases/download/v0.1.6/agent-sync-0.1.6.tar.gz"
+  sha256 "d35d72668ea2c41e152e94c861c27d494c2a1b6b012da42ed9bb7d78b27dee75"
   license "MIT"
 
   depends_on "python@3.13"
@@ -25,6 +25,7 @@ class AgentSync < Formula
       Codex history and title restoration require the Codex CLI.
       Optional encryption requires git-crypt.
       Existing agent-sync configuration and machine identity are reused.
+      Large-file snapshots require agent-sync 0.1.6 or newer on every machine.
     EOS
   end
 
