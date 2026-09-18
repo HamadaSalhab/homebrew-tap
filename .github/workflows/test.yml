@@ -23,7 +23,8 @@ jobs:
           if brew help trust >/dev/null 2>&1; then
             brew trust --formula hamadasalhab/tap/agent-sync
           fi
-          brew tap HamadaSalhab/tap "$GITHUB_WORKSPACE"
+          # setup-homebrew already links this tap to the checked-out workspace.
+          test "$(cd "$(brew --repo HamadaSalhab/tap)" && pwd -P)" = "$(cd "$GITHUB_WORKSPACE" && pwd -P)"
           brew style HamadaSalhab/tap/agent-sync
           brew install --build-from-source HamadaSalhab/tap/agent-sync
           brew audit --strict HamadaSalhab/tap/agent-sync
