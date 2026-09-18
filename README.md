@@ -3,9 +3,12 @@
 Install [agent-sync](https://github.com/HamadaSalhab/agent-sync), an experimental conversation sync CLI for Claude Code and Codex:
 
 ```sh
+brew trust --formula hamadasalhab/tap/agent-sync
 brew install HamadaSalhab/tap/agent-sync
 agent-sync --version
 ```
+
+Homebrew 7 requires explicit trust for third-party formulae. On older Homebrew versions without `brew trust`, omit the first line.
 
 Supported through Homebrew on macOS and Linux. The formula installs its Python runtime and uses Git. Install Codex separately for native Codex history/title restoration, and git-crypt if you want optional encryption.
 

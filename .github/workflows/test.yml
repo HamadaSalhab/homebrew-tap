@@ -20,6 +20,9 @@ jobs:
           HOMEBREW_NO_AUTO_UPDATE: "1"
           HOMEBREW_NO_INSTALL_CLEANUP: "1"
         run: |
+          if brew help trust >/dev/null 2>&1; then
+            brew trust --formula hamadasalhab/tap/agent-sync
+          fi
           brew tap HamadaSalhab/tap "$GITHUB_WORKSPACE"
           brew style HamadaSalhab/tap/agent-sync
           brew install --build-from-source HamadaSalhab/tap/agent-sync
